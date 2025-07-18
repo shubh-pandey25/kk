@@ -1,0 +1,1767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK Educational and Rural Development Society | IT Training & Rural Development</title>
+    <meta name="description" content="KK Educational and Rural Development Society - Leading IT training institute offering certifications, final year projects, PMKVY courses, and digital awareness programs for rural development.">
+    <meta name="keywords" content="IT training, rural development, PMKVY, digital skills, computer courses, certification, final year projects, Andhra Pradesh, education">
+    <meta name="author" content="KK Educational and Rural Development Society">
+    <meta property="og:title" content="KK Educational and Rural Development Society">
+    <meta property="og:description" content="Empowering youth with IT skills and rural development programs">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kk-educational.org">
+    <link rel="canonical" href="https://kk-educational.org">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #3b82f6;
+            --accent-color: #10b981;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-top {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        nav {
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .logo-text h1 {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            color: var(--text-light);
+            font-size: 12px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 150px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><path d="M0,20 Q250,60 500,20 T1000,20 V100 H0 Z"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background: var(--bg-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 18px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+            color: var(--white);
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Courses Section */
+        .courses {
+            padding: 80px 0;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 200px;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        .course-content {
+            padding: 30px;
+        }
+
+        .course-badge {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .course-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .course-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .course-duration {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .course-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: var(--white);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .achievement-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .achievement-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .achievement-text {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* Government Schemes Section */
+        .government-schemes {
+            padding: 80px 0;
+        }
+
+        .schemes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .scheme-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .scheme-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .scheme-logo {
+            width: 100px;
+            height: 100px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Events Section */
+        .events {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .event-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-date {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .event-content {
+            padding: 20px;
+        }
+
+        .event-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .event-description {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .event-location {
+            color: var(--primary-color);
+            font-size: 14px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 60px;
+            color: var(--primary-color);
+            opacity: 0.3;
+        }
+
+        .testimonial-text {
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .author-image {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-info h3 {
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: #9ca3af;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn {
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: var(--shadow);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-top {
+                display: none;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .stats {
+                justify-content: space-between;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .courses-grid,
+            .features-grid,
+            .schemes-grid,
+            .events-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Loading States */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary-color);
+            border-top: 2px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        </div>
+        <nav>
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">
+                        <div class="logo-img">KK</div>
+                        <div class="logo-text">
+                            <h1>KK Computers</h1>
+                            <p>Rural Development Society</p>
+                        </div>
+                    </div>
+                    <ul class="nav-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#schemes">Schemes</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button class="mobile-menu-toggle">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Empowering Rural India Through Digital Education</h1>
+                    <p>Join thousands of students who have transformed their careers with our comprehensive IT training programs and government-certified courses.</p>
+                    <div class="cta-buttons">
+                        <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                        <a href="#contact" class="btn btn-secondary">Get Started</a>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5000+</span>
+                            <span class="stat-label">Students Trained</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Courses</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Placement Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-placeholder">
+                        <img src="images/about.png" alt="Students Learning" style="width:100%; height:auto; border-radius:8px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose KK Educational?</h2>
+                <p>We provide world-class IT training and rural development programs with government certification and 100% placement assistance.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Government Certified</h3>
+                    <p>All our courses are certified by PMKVY, NSDC, and other government agencies ensuring industry recognition.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>100% Placement</h3>
+                    <p>We guarantee job placement with our extensive network of hiring partners and career support services.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <h3>Expert Trainers</h3>
+                    <p>Learn from industry professionals with years of experience in their respective fields.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Modern Infrastructure</h3>
+                    <p>State-of-the-art computer labs and high-speed internet connectivity for optimal learning.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Digital Learning</h3>
+                    <p>Online and offline learning modes with digital resources and mobile app support.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Award Winning</h3>
+                    <p>Recognized by various government bodies for excellence in rural education and development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Popular Courses</h2>
+                <p>Choose from our wide range of industry-relevant courses designed to boost your career prospects.</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image"><img src="images/cat-2.jpg" alt="Students Learning" style="width:100%; height:auto; border-radius:8px;" /></div>
+                    <div class="course-content">
+                        <div class="course-badge">PMKVY Certified</div>
+                        <h3>Computer Fundamentals</h3>
+                        <p>Learn basic computer operations, MS Office, internet usage, and digital literacy skills.</p>
+                        <div class="course-meta">
+                            <span class="course-duration">⏱️ 3 Months</span>
+                            <span class="course-price">₹5,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image"><img src="images/cat-3.jpg" alt="Students Learning" style="width:100%; height:auto; border-radius:8px;" /></div>
+                    <div class="course-content">
+                        <div class="course-badge">Industry Ready</div>
+                        <h3>Web Development</h3>
+                        <p>Master HTML, CSS, JavaScript, and popular frameworks to build modern websites.</p>
+                        <div class="course-meta">
+                            <span class="course-duration">⏱️ 6 Months</span>
+                            <span class="course-price">₹15,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image"><img src="images/course-2.jpg" alt="Students Learning" style="width:100%; height:auto; border-radius:8px;" /></div>
+                    <div class="course-content">
+                        <div class="course-badge">Job Guarantee</div>
+                        <h3>Data Entry & BPO</h3>
+                        <p>Professional data entry skills with typing speed improvement and BPO training.</p>
+                        <div class="course-meta">
+                            <span class="course-duration">⏱️ 2 Months</span>
+                            <span class="course-price">₹8,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image"><img src="images/course-1.jpg" alt="Students Learning" style="width:100%; height:auto; border-radius:8px;" /></div>
+                    <div class="course-content">
+                        <div class="course-badge">Google Certified</div>
+                        <h3>Digital Marketing</h3>
+                        <p>Learn SEO, social media marketing, Google Ads, and content marketing strategies.</p>
+                        <div class="course-meta">
+                            <span class="course-duration">⏱️ 4 Months</span>
+                            <span class="course-price">₹12,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image"><img src="images/TALLY.png" alt="Students Learning" style="width:100%; height:auto; border-radius:8px;" /></div>
+                    <div class="course-content">
+                        <div class="course-badge">Tally Certified</div>
+                        <h3>Accounting & Tally</h3>
+                        <p>Complete accounting course with Tally ERP, GST, and financial management.</p>
+                        <div class="course-meta">
+                            <span class="course-duration">⏱️ 3 Months</span>
+                            <span class="course-price">₹10,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image"><img src="images/cat-1.jpg" alt="Students Learning" style="width:100%; height:auto; border-radius:8px;" /></div>
+                    <div class="course-content">
+                        <div class="course-badge">Advanced</div>
+                        <h3>Programming & Software</h3>
+                        <p>Learn Python, Java, C++, and software development with hands-on projects.</p>
+                        <div class="course-meta">
+                            <span class="course-duration">⏱️ 8 Months</span>
+                            <span class="course-price">₹20,000</span>
+                        </div>
+                        <a href="#contact" class="btn btn-primary">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About KK Educational and Rural Development Society</h2>
+                    <p>Founded in 2015, KK Educational and Rural Development Society has been at the forefront of bridging the digital divide in rural India. We are committed to providing quality IT education and skill development programs that empower individuals and transform communities.</p>
+                    <p>Our mission is to create digitally literate citizens who can contribute to India's growing economy. Through our comprehensive training programs, we have successfully trained over 5,000 students and achieved a remarkable 95% placement rate.</p>
+                    <p>We are recognized by various government bodies including PMKVY, NSDC, and the Government of Andhra Pradesh for our excellence in rural education and development initiatives.</p>
+                    <a href="#contact" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <img src="images/director.png" alt="Students Learning" style="width:100%; height:auto; border-radius:8px;" />
+                    </div>
+                </div>
+            </div>
+            <div class="achievements">
+                <div class="achievement-item">
+                    <span class="achievement-number">5000+</span>
+                    <span class="achievement-text">Students Trained</span>
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-number">95%</span>
+                    <span class="achievement-text">Placement Rate</span>
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-number">50+</span>
+                    <span class="achievement-text">Course Programs</span>
+                </div>
+                <div class="achievement-item">
+                    <span class="achievement-number">100+</span>
+                    <span class="achievement-text">Hiring Partners</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Schemes Section -->
+    <section id="schemes" class="government-schemes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Government Schemes & Certifications</h2>
+                <p>We are authorized training partners for various government schemes and provide certified courses.</p>
+            </div>
+            <div class="schemes-grid">
+                <div class="scheme-card">
+                    <div class="scheme-logo"><img src="images/pmkvy.png" alt="Students Learning" style="width:100%; height:auto; border-radius:8px;" /></div>
+                    <h3>PMKVY - Pradhan Mantri Kaushal Vikas Yojana</h3>
+                    <p>Government of India's flagship skill development scheme providing free training with monetary rewards.</p>
+                    <a href="#contact" class="btn btn-secondary">Apply Now</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="scheme-logo">[NSDC Logo]</div>
+                    <h3>NSDC - National Skill Development Corporation</h3>
+                    <p>Industry-relevant skill training programs with certification and placement assistance.</p>
+                    <a href="#contact" class="btn btn-secondary">Apply Now</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="scheme-logo"><img src="images/AP.jpeg" alt="Students Learning" style="width:100%; height:auto; border-radius:8px;" /></div>
+                    <h3>Andhra Pradesh Government Schemes</h3>
+                    <p>State government initiatives for rural development and skill enhancement programs.</p>
+                    <a href="#contact" class="btn btn-secondary">Apply Now</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="scheme-logo">[Digital India Logo]</div>
+                    <h3>Digital India Initiative</h3>
+                    <p>Supporting Digital India mission through digital literacy and technology adoption programs.</p>
+                    <a href="#contact" class="btn btn-secondary">Apply Now</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="scheme-logo"><img src="images/nsdc.png" alt="Students Learning" style="width:100%; height:auto; border-radius:8px;" /></div>
+                    <h3>Skill India Mission</h3>
+                    <p>Aligned with Skill India to provide industry-relevant training and certification.</p>
+                    <a href="#contact" class="btn btn-secondary">Apply Now</a>
+                </div>
+                <div class="scheme-card">
+                    <div class="scheme-logo">[RSETIs Logo]</div>
+                    <h3>RSETIs - Rural Self Employment</h3>
+                    <p>Rural Self Employment Training Institutes for entrepreneurship development.</p>
+                    <a href="#contact" class="btn btn-secondary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Events & Workshops</h2>
+                <p>Join our events, workshops, and competitions to enhance your skills and network with industry professionals.</p>
+            </div>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <div>25</div>
+                        <div>JUL</div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">HACK THE WEB 2025</h3>
+                        <p class="event-description">National level web development competition with exciting prizes and internship opportunities.</p>
+                        <p class="event-location">📍 KK Educational Center, Vijayawada</p>
+                        <a href="#contact" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <div>30</div>
+                        <div>JUL</div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Digital Marketing Workshop</h3>
+                        <p class="event-description">Learn latest digital marketing trends and strategies from industry experts.</p>
+                        <p class="event-location">📍 Online & Offline Mode</p>
+                        <a href="#contact" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <div>05</div>
+                        <div>AUG</div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Career Guidance Seminar</h3>
+                        <p class="event-description">Expert guidance on career opportunities in IT and skill development.</p>
+                        <p class="event-location">📍 Multiple Centers</p>
+                        <a href="#contact" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <div>12</div>
+                        <div>AUG</div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">AI & ML Bootcamp</h3>
+                        <p class="event-description">Intensive bootcamp on Artificial Intelligence and Machine Learning fundamentals.</p>
+                        <p class="event-location">📍 Advanced Learning Center</p>
+                        <a href="#contact" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <div>20</div>
+                        <div>AUG</div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Entrepreneurship Summit</h3>
+                        <p class="event-description">Connect with successful entrepreneurs and learn about starting your own business.</p>
+                        <p class="event-location">📍 Convention Center</p>
+                        <a href="#contact" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <div>28</div>
+                        <div>AUG</div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Job Fair 2025</h3>
+                        <p class="event-description">Meet with top recruiters and explore job opportunities in various sectors.</p>
+                        <p class="event-location">📍 Exhibition Grounds</p>
+                        <a href="#contact" class="btn btn-primary">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Students Say</h2>
+                <p>Hear from our successful students who have transformed their careers through our training programs.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">KK Educational changed my life completely. The web development course was excellent and the placement support helped me land my dream job at a top IT company.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">RS</div>
+                        <div class="author-info">
+                            <h4>Ravi Sharma</h4>
+                            <p>Web Developer at TCS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The PMKVY course was completely free and I got certified in data entry. Now I'm earning ₹15,000 per month and supporting my family.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">PK</div>
+                        <div class="author-info">
+                            <h4>Priya Kumari</h4>
+                            <p>Data Entry Operator</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Excellent training quality and experienced instructors. The digital marketing course helped me start my own agency and I'm now earning 6 figures.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">AK</div>
+                        <div class="author-info">
+                            <h4>Amit Kumar</h4>
+                            <p>Digital Marketing Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The accounting course with Tally certification was perfect for my career. I got placed in a multinational company within 2 months of completion.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">SK</div>
+                        <div class="author-info">
+                            <h4>Sunita Kumari</h4>
+                            <p>Accountant at Wipro</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The programming course gave me strong fundamentals in Java and Python. I'm now working as a software engineer and earning ₹25,000 per month.</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">VR</div>
+                        <div class="author-info">
+                            <h4>Vikram Reddy</h4>
+                            <p>Software Engineer at Infosys</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Best decision of my life to join KK Educational. The trainers are very supportive and the infrastructure is world-class. Highly recommended!</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">MG</div>
+                        <div class="author-info">
+                            <h4>Maya Gupta</h4>
+                            <p>BPO Executive at Accenture</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to start your journey? Contact us today for course details and enrollment information.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Main Street, Vijayawada<br>Andhra Pradesh - 520001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91-XXXX<br>+91-XXXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@kk-educational.org<br>admissions@kk-educational.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div>
+                            <h4>Website</h4>
+                            <p>www.kk-educational.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon-Sat: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course Interest</label>
+                            <select id="course" name="course">
+                                <option value="">Select a course</option>
+                                <option value="computer-fundamentals">Computer Fundamentals</option>
+                                <option value="web-development">Web Development</option>
+                                <option value="data-entry">Data Entry & BPO</option>
+                                <option value="digital-marketing">Digital Marketing</option>
+                                <option value="accounting">Accounting & Tally</option>
+                                <option value="programming">Programming & Software</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your goals and how we can help you..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KK Educational</h3>
+                    <p>Leading IT training institute committed to bridging the digital divide in rural India through quality education and skill development programs.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#schemes">Government Schemes</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#courses">Computer Fundamentals</a></li>
+                        <li><a href="#courses">Web Development</a></li>
+                        <li><a href="#courses">Data Entry & BPO</a></li>
+                        <li><a href="#courses">Digital Marketing</a></li>
+                        <li><a href="#courses">Accounting & Tally</a></li>
+                        <li><a href="#courses">Programming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 XXXX<br>XXXX - XXXX</p>
+                    <p>📞 +91 90145 97749</p>
+                    <p>✉️ info@kk-educational.org</p>
+                    <p>🌐 www.kk-educational.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KK Educational and Rural Development Society. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/+91 90145 97749" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+            💬
+        </a>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu after clicking
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Header Background Change on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'white';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Animate on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-on-scroll');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Add loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Add hover effects to cards
+        document.querySelectorAll('.feature-card, .course-card, .scheme-card, .event-card, .testimonial-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Counter Animation
+        function animateCounter(element, start, end, duration) {
+            let startTime = null;
+            
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                
+                const value = Math.floor(progress * (end - start) + start);
+                element.textContent = value + (element.dataset.suffix || '');
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animation);
+                }
+            }
+            
+            requestAnimationFrame(animation);
+        }
+
+        // Animate counters when they come into view
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const endValue = parseInt(target.textContent.replace(/[^\d]/g, ''));
+                    animateCounter(target, 0, endValue, 2000);
+                    counterObserver.unobserve(target);
+                }
+            });
+        });
+
+        document.querySelectorAll('.stat-number, .achievement-number').forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+        // Add search functionality
+        function addSearchFeature() {
+            const searchInput = document.createElement('input');
+            searchInput.type = 'text';
+            searchInput.placeholder = 'Search courses...';
+            searchInput.style.cssText = `
+                padding: 10px;
+                margin: 20px 0;
+                width: 100%;
+                border: 2px solid #e5e7eb;
+                border-radius: 8px;
+                font-size: 16px;
+            `;
+            
+            const coursesSection = document.querySelector('#courses .container');
+            coursesSection.insertBefore(searchInput, coursesSection.children[1]);
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                const courseCards = document.querySelectorAll('.course-card');
+                
+                courseCards.forEach(card => {
+                    const courseTitle = card.querySelector('h3').textContent.toLowerCase();
+                    const courseDescription = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (courseTitle.includes(searchTerm) || courseDescription.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        // Initialize search feature
+        addSearchFeature();
+
+        /<script>
+  // === Dark Mode Toggle ===
+  function addDarkModeToggle() {
+    const toggle = document.createElement('button');
+    toggle.innerText = '🌓';
+    toggle.title = 'Toggle Dark Mode';
+    toggle.style.cssText = `
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 50%;
+      background: #222;
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    `;
+    document.body.appendChild(toggle);
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if (document.body.classList.contains('dark-mode')) {
+        toggle.style.background = '#f9f9f9';
+        toggle.style.color = '#222';
+      } else {
+        toggle.style.background = '#222';
+        toggle.style.color = '#fff';
+      }
+    });
+  }
+
+  // === Scroll to Top Button ===
+  function addScrollToTopButton() {
+    const scrollToTopBtn = document.createElement('button');
+    scrollToTopBtn.innerHTML = '↑';
+    scrollToTopBtn.title = 'Scroll to Top';
+    scrollToTopBtn.style.cssText = `
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      z-index: 1000;
+      padding: 10px 14px;
+      font-size: 18px;
+      border: none;
+      border-radius: 50%;
+      background: #1a73e8;
+      color: white;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    `;
+    document.body.appendChild(scrollToTopBtn);
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = 'block';
+      } else {
+        scrollToTopBtn.style.display = 'none';
+      }
+    });
+  }
+
+  // Initialize both on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    addDarkModeToggle();
+    addScrollToTopButton();
+  });
+</script>
+
